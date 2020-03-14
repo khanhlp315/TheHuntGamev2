@@ -1,14 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TheHuntGame.Utilities;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace TheHuntGame.Scenes
 {
     public class LoadingScene: MonoBehaviour
     {
-        private int _systemsLoaded = 0;
+        private int _systemsLoaded;
         private readonly List<ISystem> _systems = new List<ISystem>();
 
         private void Awake()
@@ -33,6 +33,7 @@ namespace TheHuntGame.Scenes
                 yield return null;
             }
 
+            SceneManager.LoadScene("MainGameScene");
 
             yield return null;
         }

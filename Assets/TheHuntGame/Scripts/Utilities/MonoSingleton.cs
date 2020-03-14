@@ -6,7 +6,7 @@ namespace TheHuntGame.Utilities
     public abstract class MonoSingleton<T1, T2>: MonoBehaviour, ISystem where T1: MonoBehaviour where T2: ScriptableObject
     {
         protected static T1 _instance;
-        private static object _lock = new object();
+        private static readonly object _lock = new object();
 
         protected T2 _config;
 

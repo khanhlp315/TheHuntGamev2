@@ -9,10 +9,10 @@ namespace TheHuntGame.Runner
 {
     public class Runner:MonoSingleton<Runner, RunnerConfig>
     {
-        private List<Action> _mainThreadActionQueue = new List<Action>();
-        private List<Action> _updateActionQueue = new List<Action>();
-        private List<Action> _lateUpdateActionQueue = new List<Action>();
-        private object _lockCall = new object();
+        private readonly List<Action> _mainThreadActionQueue = new List<Action>();
+        private readonly List<Action> _updateActionQueue = new List<Action>();
+        private readonly List<Action> _lateUpdateActionQueue = new List<Action>();
+        private readonly object _lockCall = new object();
 
         public override void Initialize()
         {
@@ -80,7 +80,7 @@ namespace TheHuntGame.Runner
         {
             if (func == null)
             {
-                throw new System.Exception("Function can not be null");
+                throw new Exception("Function can not be null");
             }
 
             lock (_lockCall)

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace TheHuntGame.Scenes
 {
-    public class GameScene: MonoBehaviour
+    public class MainGameScene: MonoBehaviour
     {
         
     }
