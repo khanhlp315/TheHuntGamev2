@@ -1,0 +1,20 @@
+
+moi2.png
+size: 578,576
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BG_moi_2a
+  rotate: false
+  xy: 2, 163
+  size: 286, 411
+  orig: 286, 411
+  offset: 0, 0
+  index: -1
+BG_moi_2b
+  rotate: false
+  xy: 290, 163
+  size: 286, 411
+  orig: 286, 411
+  offset: 0, 0
+  index: -1
