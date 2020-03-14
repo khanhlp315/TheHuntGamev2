@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcc46d8a78c4663a705c865baea79e9, type: 3}
+  m_Name: GameMachineConfig
+  m_EditorClassIdentifier: 
+  Port: 0
+  Buttons:
+  - GameMachineButtonCode: 0
+    PressCommand: S0
+    ReleaseCommand: S1
+    IsButtonPressed: 0
+    IsButtonPressedLastFrame: 0
+  - GameMachineButtonCode: 1
+    PressCommand: M0
+    ReleaseCommand: M1
+    IsButtonPressed: 0
+    IsButtonPressedLastFrame: 0
+  - GameMachineButtonCode: 2
+    PressCommand: T0
+    ReleaseCommand: T1
+    IsButtonPressed: 0
+    IsButtonPressedLastFrame: 0
+  CoinInsertCommand: D0
+  CoinOutCommand: C0

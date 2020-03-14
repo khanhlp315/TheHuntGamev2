@@ -1,0 +1,8 @@
+.idea
+*.csproj
+*.sln
+*.DotSettings
+obj
+Temp
+Logs
+Library
