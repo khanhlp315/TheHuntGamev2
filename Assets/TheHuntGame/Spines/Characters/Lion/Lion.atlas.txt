@@ -1,0 +1,267 @@
+
+Lion.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Being push_001
+  rotate: false
+  xy: 2, 1213
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Being push_002
+  rotate: false
+  xy: 2, 378
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Lion_001-assets/Lion back leg_001
+  rotate: false
+  xy: 1875, 1863
+  size: 39, 61
+  orig: 39, 61
+  offset: 0, 0
+  index: -1
+Lion_001-assets/Lion back leg_002
+  rotate: false
+  xy: 2, 2
+  size: 37, 57
+  orig: 37, 57
+  offset: 0, 0
+  index: -1
+Lion_001-assets/Lion body
+  rotate: false
+  xy: 1875, 1926
+  size: 146, 120
+  orig: 146, 120
+  offset: 0, 0
+  index: -1
+Lion_001-assets/Lion front leg_001
+  rotate: true
+  xy: 265, 157
+  size: 44, 78
+  orig: 44, 78
+  offset: 0, 0
+  index: -1
+Lion_001-assets/Lion front leg_002
+  rotate: false
+  xy: 455, 299
+  size: 40, 77
+  orig: 40, 77
+  offset: 0, 0
+  index: -1
+Lion_001-assets/Lion head
+  rotate: false
+  xy: 265, 203
+  size: 188, 173
+  orig: 188, 173
+  offset: 0, 0
+  index: -1
+Lion_001-assets/Lion_tail
+  rotate: false
+  xy: 2, 61
+  size: 68, 71
+  orig: 68, 71
+  offset: 0, 0
+  index: -1
+Lion_003-assets/Lion Surprise
+  rotate: false
+  xy: 2, 134
+  size: 261, 242
+  orig: 261, 242
+  offset: 0, 0
+  index: -1
+
+Lion2.png
+size: 2022,2020
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Escaped_001
+  rotate: true
+  xy: 1564, 1250
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_002
+  rotate: false
+  xy: 783, 1163
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_003
+  rotate: false
+  xy: 2, 764
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_004
+  rotate: false
+  xy: 772, 705
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_001
+  rotate: false
+  xy: 2, 1621
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_002
+  rotate: false
+  xy: 783, 1621
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_003
+  rotate: false
+  xy: 2, 1222
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Lion_ani/Lion-Being-push_001
+  rotate: false
+  xy: 2, 250
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Lion_ani/Lion-Being-push_002
+  rotate: false
+  xy: 516, 191
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Lion_ani/Lion-Catched_001
+  rotate: false
+  xy: 1030, 191
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+Lion3.png
+size: 1981,1981
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_001
+  rotate: false
+  xy: 516, 2
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Lion_ani/Lion-Catched_002
+  rotate: false
+  xy: 2, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Lion_ani/Lion-escaped_001
+  rotate: false
+  xy: 516, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Lion_ani/Lion-escaped_002
+  rotate: false
+  xy: 1030, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Lion_ani/Lion-esist-001
+  rotate: false
+  xy: 2, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Lion_ani/Lion-esist-002
+  rotate: false
+  xy: 516, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Lion_ani/Lion-win_001
+  rotate: false
+  xy: 1030, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Lion_ani/Lion-win_002
+  rotate: false
+  xy: 2, 439
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+Lion4.png
+size: 1875,1873
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Being push_003
+  rotate: false
+  xy: 2, 1038
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Being push_004
+  rotate: false
+  xy: 2, 203
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+
+Lion5.png
+size: 1904,1904
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_002
+  rotate: false
+  xy: 2, 953
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Esist_003
+  rotate: false
+  xy: 2, 2
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+
+Lion6.png
+size: 1410,1408
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_004
+  rotate: false
+  xy: 2, 457
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1

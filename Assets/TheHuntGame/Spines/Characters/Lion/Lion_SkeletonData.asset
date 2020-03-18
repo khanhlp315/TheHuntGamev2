@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: Buff_SkeletonData
+  m_Name: Lion_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 471d0a4a4091f46f49c227a56d603a4d, type: 2}
+  - {fileID: 11400000, guid: 8f1cd22bffee040a4b22bbc1fc016c8d, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 17b6367258622442794c9f162a7f640e, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: d00e1b03f0c834f29856f26f19c2b5de, type: 3}
   fromAnimation: []
   toAnimation: []
   duration: []
   defaultMix: 0.2
-  controller: {fileID: 9100000, guid: 855aaf88958a04deead2f519aa8ca733, type: 2}
+  controller: {fileID: 9100000, guid: 45e575a5a3a72424e881670adc239c5a, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Horse_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 9bd348c67cc0946628f79e7cf9cea575, type: 3}
+  materials:
+  - {fileID: 2100000, guid: cc689fba8ca2d47b78df44f5345bf3d1, type: 2}
+  - {fileID: 2100000, guid: cc8954d9374f8413bbfe8b68e10cdae1, type: 2}
+  - {fileID: 2100000, guid: 44ade0b53be8345beba1eded477cb4b1, type: 2}
+  - {fileID: 2100000, guid: b1b9ec3c6008f40b986097980dba6f4b, type: 2}
+  - {fileID: 2100000, guid: b2e7b7ba92ded48dca69b29d9bf66c07, type: 2}
+  - {fileID: 2100000, guid: 11e59d8515f724a3484b98f9c63259ef, type: 2}

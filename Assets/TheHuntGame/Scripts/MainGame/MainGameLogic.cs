@@ -4,6 +4,13 @@ using UnityEngine;
 
 namespace TheHuntGame.MainGame
 {
+    enum GameState
+    {
+        Waiting,
+        Running,
+        Catching,
+        End
+    }
     public class MainGameLogic : MonoBehaviour
     {
         private void Awake()

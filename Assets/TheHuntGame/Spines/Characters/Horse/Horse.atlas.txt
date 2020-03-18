@@ -1,0 +1,267 @@
+
+Horse.png
+size: 2034,2032
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Being push_001
+  rotate: false
+  xy: 2, 1197
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Being push_002
+  rotate: false
+  xy: 2, 362
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Horse_001-assets/horse_back leg_001
+  rotate: false
+  xy: 1875, 1810
+  size: 35, 67
+  orig: 35, 67
+  offset: 0, 0
+  index: -1
+Horse_001-assets/horse_back leg_002
+  rotate: false
+  xy: 250, 173
+  size: 33, 64
+  orig: 33, 64
+  offset: 0, 0
+  index: -1
+Horse_001-assets/horse_body
+  rotate: false
+  xy: 250, 239
+  size: 132, 121
+  orig: 132, 121
+  offset: 0, 0
+  index: -1
+Horse_001-assets/horse_front leg_001
+  rotate: false
+  xy: 2006, 1954
+  size: 26, 76
+  orig: 26, 76
+  offset: 0, 0
+  index: -1
+Horse_001-assets/horse_front leg_002
+  rotate: false
+  xy: 384, 286
+  size: 22, 74
+  orig: 22, 74
+  offset: 0, 0
+  index: -1
+Horse_001-assets/horse_head
+  rotate: false
+  xy: 1875, 1879
+  size: 129, 151
+  orig: 129, 151
+  offset: 0, 0
+  index: -1
+Horse_001-assets/horse_tail
+  rotate: false
+  xy: 2, 5
+  size: 64, 63
+  orig: 64, 63
+  offset: 0, 0
+  index: -1
+Horse_003-assets/Horse Surprise
+  rotate: false
+  xy: 2, 70
+  size: 246, 290
+  orig: 246, 290
+  offset: 0, 0
+  index: -1
+
+Horse2.png
+size: 2022,2020
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Escaped_001
+  rotate: true
+  xy: 1564, 1250
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_002
+  rotate: false
+  xy: 783, 1163
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_003
+  rotate: false
+  xy: 2, 764
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_004
+  rotate: false
+  xy: 772, 705
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_001
+  rotate: false
+  xy: 2, 1621
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_002
+  rotate: false
+  xy: 783, 1621
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_003
+  rotate: false
+  xy: 2, 1222
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Horse_ani/Horse-Being-push_001
+  rotate: false
+  xy: 2, 250
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Horse_ani/Horse-Being-push_002
+  rotate: false
+  xy: 516, 191
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Horse_ani/Horse-Catched_001
+  rotate: false
+  xy: 1030, 191
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+Horse3.png
+size: 1981,1981
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_001
+  rotate: false
+  xy: 516, 2
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Horse_ani/Horse-Catched_002
+  rotate: false
+  xy: 2, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Horse_ani/Horse-escaped_001
+  rotate: false
+  xy: 516, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Horse_ani/Horse-escaped_002
+  rotate: false
+  xy: 1030, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Horse_ani/Horse-esist-001
+  rotate: false
+  xy: 2, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Horse_ani/Horse-esist-002
+  rotate: false
+  xy: 516, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Horse_ani/Horse-win_001
+  rotate: false
+  xy: 1030, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Horse_ani/Horse-win_002
+  rotate: false
+  xy: 2, 439
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+Horse4.png
+size: 1875,1873
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Being push_003
+  rotate: false
+  xy: 2, 1038
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Being push_004
+  rotate: false
+  xy: 2, 203
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+
+Horse5.png
+size: 1904,1904
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_002
+  rotate: false
+  xy: 2, 953
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Esist_003
+  rotate: false
+  xy: 2, 2
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+
+Horse6.png
+size: 1410,1408
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_004
+  rotate: false
+  xy: 2, 457
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Fox_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: f03b299d4eee24380bbba7e706c2c736, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 6f073ea67164a44da96c2f83ed755d79, type: 2}
+  - {fileID: 2100000, guid: 13992be926cee4a3abbc3ca28c4e8494, type: 2}
+  - {fileID: 2100000, guid: 20dd8b65374d741949c1c0d003e16271, type: 2}
+  - {fileID: 2100000, guid: 3b1fd93f87cd04cefb43374d1b813e11, type: 2}
+  - {fileID: 2100000, guid: 399b9888eaee44d3cad7b47d355b0589, type: 2}
+  - {fileID: 2100000, guid: c50c819b20698463ba13861c013fec8d, type: 2}

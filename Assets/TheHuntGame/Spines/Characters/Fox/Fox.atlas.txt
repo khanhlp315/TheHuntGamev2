@@ -1,0 +1,267 @@
+
+Fox.png
+size: 2036,2034
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Escaped_001
+  rotate: false
+  xy: 783, 1177
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_002
+  rotate: false
+  xy: 2, 936
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_003
+  rotate: false
+  xy: 772, 719
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_004
+  rotate: true
+  xy: 1553, 483
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_001
+  rotate: false
+  xy: 856, 1635
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_002
+  rotate: false
+  xy: 2, 1394
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_003
+  rotate: true
+  xy: 1637, 1253
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Fox ani/Fox-Being-push_001
+  rotate: false
+  xy: 2, 422
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Fox ani/Fox-Being-push_002
+  rotate: false
+  xy: 516, 205
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Fox ani/Fox-Catched_001
+  rotate: false
+  xy: 1030, 205
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Fox_001-assets/Fox_back leg_001
+  rotate: true
+  xy: 130, 2007
+  size: 25, 40
+  orig: 25, 40
+  offset: 0, 0
+  index: -1
+Fox_001-assets/Fox_back leg_002
+  rotate: true
+  xy: 88, 2008
+  size: 24, 40
+  orig: 24, 40
+  offset: 0, 0
+  index: -1
+Fox_001-assets/Fox_body
+  rotate: false
+  xy: 172, 1967
+  size: 109, 65
+  orig: 109, 65
+  offset: 0, 0
+  index: -1
+Fox_001-assets/Fox_front leg_001
+  rotate: true
+  xy: 44, 2013
+  size: 19, 42
+  orig: 19, 42
+  offset: 0, 0
+  index: -1
+Fox_001-assets/Fox_front leg_002
+  rotate: true
+  xy: 2, 2015
+  size: 17, 40
+  orig: 17, 40
+  offset: 0, 0
+  index: -1
+Fox_001-assets/Fox_head
+  rotate: true
+  xy: 413, 1883
+  size: 149, 191
+  orig: 149, 191
+  offset: 0, 0
+  index: -1
+Fox_001-assets/Fox_tail
+  rotate: true
+  xy: 283, 1927
+  size: 105, 128
+  orig: 105, 128
+  offset: 0, 0
+  index: -1
+Fox_003-assets/Fox Surprise
+  rotate: false
+  xy: 606, 1793
+  size: 248, 239
+  orig: 248, 239
+  offset: 0, 0
+  index: -1
+
+Fox2.png
+size: 1981,1981
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_001
+  rotate: false
+  xy: 516, 2
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Fox ani/Fox-Catched_002
+  rotate: false
+  xy: 2, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Fox ani/Fox-escaped_001
+  rotate: false
+  xy: 516, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Fox ani/Fox-escaped_002
+  rotate: false
+  xy: 1030, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Fox ani/Fox-esist-001
+  rotate: false
+  xy: 2, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Fox ani/Fox-esist-002
+  rotate: false
+  xy: 516, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Fox ani/Fox-win_001
+  rotate: false
+  xy: 1030, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Fox ani/Fox-win_002
+  rotate: false
+  xy: 2, 439
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+Fox3.png
+size: 1875,1873
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Being push_001
+  rotate: false
+  xy: 2, 1038
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Being push_002
+  rotate: false
+  xy: 2, 203
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+
+Fox4.png
+size: 1875,1873
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Being push_003
+  rotate: false
+  xy: 2, 1038
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Being push_004
+  rotate: false
+  xy: 2, 203
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+
+Fox5.png
+size: 1904,1904
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_002
+  rotate: false
+  xy: 2, 953
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Esist_003
+  rotate: false
+  xy: 2, 2
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+
+Fox6.png
+size: 1410,1408
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_004
+  rotate: false
+  xy: 2, 457
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1

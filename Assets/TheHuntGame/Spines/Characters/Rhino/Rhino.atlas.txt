@@ -1,0 +1,267 @@
+
+Rhino.png
+size: 2039,2039
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Escaped_001
+  rotate: false
+  xy: 2, 974
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_002
+  rotate: true
+  xy: 1564, 870
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_003
+  rotate: false
+  xy: 772, 783
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_004
+  rotate: false
+  xy: 2, 516
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_001
+  rotate: false
+  xy: 974, 1640
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_002
+  rotate: false
+  xy: 2, 1432
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_003
+  rotate: false
+  xy: 783, 1241
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Rhino-assets/Rhino_back leg_001
+  rotate: true
+  xy: 274, 1983
+  size: 54, 75
+  orig: 54, 75
+  offset: 0, 0
+  index: -1
+Rhino-assets/Rhino_back leg_002
+  rotate: true
+  xy: 205, 1987
+  size: 50, 67
+  orig: 50, 67
+  offset: 0, 0
+  index: -1
+Rhino-assets/Rhino_body
+  rotate: false
+  xy: 496, 1866
+  size: 207, 171
+  orig: 207, 171
+  offset: 0, 0
+  index: -1
+Rhino-assets/Rhino_front leg_001
+  rotate: true
+  xy: 135, 1988
+  size: 49, 68
+  orig: 49, 68
+  offset: 0, 0
+  index: -1
+Rhino-assets/Rhino_front leg_002
+  rotate: true
+  xy: 67, 1993
+  size: 44, 66
+  orig: 44, 66
+  offset: 0, 0
+  index: -1
+Rhino-assets/Rhino_head
+  rotate: false
+  xy: 351, 1910
+  size: 143, 127
+  orig: 143, 127
+  offset: 0, 0
+  index: -1
+Rhino-assets/Rhino_tail
+  rotate: true
+  xy: 2, 2004
+  size: 33, 63
+  orig: 33, 63
+  offset: 0, 0
+  index: -1
+Rhino_003-assets/Rhino Surprise
+  rotate: false
+  xy: 705, 1831
+  size: 267, 206
+  orig: 267, 206
+  offset: 0, 0
+  index: -1
+Rihno_ani/Rhino-Being-Push_001
+  rotate: false
+  xy: 772, 269
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Rihno_ani/Rhino-Being-Push_002
+  rotate: false
+  xy: 1286, 269
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Rihno_ani/Rhino-Catched_001
+  rotate: false
+  xy: 2, 2
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+Rhino2.png
+size: 1981,1981
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_001
+  rotate: false
+  xy: 516, 2
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Rihno_ani/Rhino-Catched_002
+  rotate: false
+  xy: 2, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Rihno_ani/Rhino-escaped_001
+  rotate: false
+  xy: 516, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Rihno_ani/Rhino-escaped_002
+  rotate: false
+  xy: 1030, 1467
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Rihno_ani/Rhino-esist_001
+  rotate: false
+  xy: 2, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Rihno_ani/Rhino-esist_002
+  rotate: false
+  xy: 516, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Rihno_ani/Rhino-win_001
+  rotate: false
+  xy: 1030, 953
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Rihno_ani/Rhino-win_002
+  rotate: false
+  xy: 2, 439
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+Rhino3.png
+size: 1875,1873
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Being push_001
+  rotate: false
+  xy: 2, 1038
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Being push_002
+  rotate: false
+  xy: 2, 203
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+
+Rhino4.png
+size: 1875,1873
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Being push_003
+  rotate: false
+  xy: 2, 1038
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Being push_004
+  rotate: false
+  xy: 2, 203
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+
+Rhino5.png
+size: 1904,1904
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_002
+  rotate: false
+  xy: 2, 953
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Esist_003
+  rotate: false
+  xy: 2, 2
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+
+Rhino6.png
+size: 1410,1408
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_004
+  rotate: false
+  xy: 2, 457
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1

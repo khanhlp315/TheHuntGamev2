@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Super Monkey_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 655c354ed42c04e5181db8bac5583861, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 9d063f1d4adee4fb2be902d39d4ca138, type: 2}
+  - {fileID: 2100000, guid: 95427c6697927490a91bf9a02365cdee, type: 2}
+  - {fileID: 2100000, guid: e9cad16c15f5f4d62a04439c257d50de, type: 2}
+  - {fileID: 2100000, guid: 02b912f91bcfa4763882e78abb9ad1f5, type: 2}
+  - {fileID: 2100000, guid: 23c6c814dd5c543e4ab77132c3478eab, type: 2}
+  - {fileID: 2100000, guid: 3ac1b3d279cf74e0d900d90e897cdf70, type: 2}

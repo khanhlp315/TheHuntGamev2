@@ -1,0 +1,267 @@
+
+Super Monkey.png
+size: 1991,1989
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Being push_001
+  rotate: false
+  xy: 2, 1154
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Being push_002
+  rotate: false
+  xy: 2, 319
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Super Monkey-assets/SuperMonkey_back leg_001
+  rotate: false
+  xy: 1955, 1942
+  size: 34, 45
+  orig: 34, 45
+  offset: 0, 0
+  index: -1
+Super Monkey-assets/SuperMonkey_back leg_002
+  rotate: false
+  xy: 2, 8
+  size: 31, 45
+  orig: 31, 45
+  offset: 0, 0
+  index: -1
+Super Monkey-assets/SuperMonkey_body
+  rotate: false
+  xy: 1875, 1902
+  size: 78, 85
+  orig: 78, 85
+  offset: 0, 0
+  index: -1
+Super Monkey-assets/SuperMonkey_front leg_001
+  rotate: false
+  xy: 228, 242
+  size: 38, 75
+  orig: 38, 75
+  offset: 0, 0
+  index: -1
+Super Monkey-assets/SuperMonkey_front leg_002
+  rotate: false
+  xy: 1875, 1826
+  size: 36, 74
+  orig: 36, 74
+  offset: 0, 0
+  index: -1
+Super Monkey-assets/SuperMonkey_head
+  rotate: false
+  xy: 2, 132
+  size: 224, 185
+  orig: 224, 185
+  offset: 0, 0
+  index: -1
+Super Monkey-assets/SuperMonkey_tail
+  rotate: false
+  xy: 2, 55
+  size: 84, 75
+  orig: 84, 75
+  offset: 0, 0
+  index: -1
+
+Super Monkey2.png
+size: 2022,2020
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Escaped_001
+  rotate: true
+  xy: 1564, 1250
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_002
+  rotate: false
+  xy: 783, 1163
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_003
+  rotate: false
+  xy: 2, 764
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Escaped_004
+  rotate: false
+  xy: 772, 705
+  size: 768, 456
+  orig: 768, 456
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_001
+  rotate: false
+  xy: 2, 1621
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_002
+  rotate: false
+  xy: 783, 1621
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Running_003
+  rotate: false
+  xy: 2, 1222
+  size: 779, 397
+  orig: 779, 397
+  offset: 0, 0
+  index: -1
+Super Monkey_ani/Super-Monkey-Being-push_001
+  rotate: false
+  xy: 2, 250
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Super Monkey_ani/Super-Monkey-Being-push_002
+  rotate: false
+  xy: 516, 191
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Super Monkey_ani/Super-Monkey-Catched_001
+  rotate: false
+  xy: 1030, 191
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+Super Monkey3.png
+size: 1875,1873
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Being push_003
+  rotate: false
+  xy: 2, 1038
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Being push_004
+  rotate: false
+  xy: 2, 203
+  size: 1871, 833
+  orig: 1871, 833
+  offset: 0, 0
+  index: -1
+
+Super Monkey4.png
+size: 1924,1922
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_001
+  rotate: false
+  xy: 2, 971
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Esist_002
+  rotate: false
+  xy: 2, 20
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Super Monkey_ani/Super-Monkey-Catched_002
+  rotate: false
+  xy: 1410, 1408
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Super Monkey_ani/Super-Monkey-escaped_001
+  rotate: false
+  xy: 1410, 894
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Super Monkey_ani/Super-Monkey-escaped_002
+  rotate: false
+  xy: 1410, 380
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+Super Monkey5.png
+size: 1924,1922
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boar_001-assets/Esist_003
+  rotate: false
+  xy: 2, 971
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Boar_001-assets/Esist_004
+  rotate: false
+  xy: 2, 20
+  size: 1406, 949
+  orig: 1406, 949
+  offset: 0, 0
+  index: -1
+Super Monkey_ani/Super-Monkey-esist_001
+  rotate: false
+  xy: 1410, 1408
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Super Monkey_ani/Super-Monkey-esist_002
+  rotate: false
+  xy: 1410, 894
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Super Monkey_ani/Super-Monkey-win_001
+  rotate: false
+  xy: 1410, 380
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+Super Monkey6.png
+size: 1030,1030
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Super Monkey_ani/Super-Monkey-Surprise
+  rotate: false
+  xy: 2, 2
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+Super Monkey_ani/Super-Monkey-win_002
+  rotate: false
+  xy: 2, 516
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
