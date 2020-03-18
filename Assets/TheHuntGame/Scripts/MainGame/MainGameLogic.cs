@@ -18,6 +18,11 @@ namespace TheHuntGame.MainGame
             EventSystem.EventSystem.Instance.Bind<CoinInsertEvent>(OnCoinInserted);
         }
 
+        private void OnDestroy()
+        {
+            EventSystem.EventSystem.Instance.Unbind<CoinInsertEvent>(OnCoinInserted);
+        }
+
         private void OnCoinInserted(CoinInsertEvent e)
         {
         }
