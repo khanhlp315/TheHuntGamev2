@@ -9,17 +9,26 @@ namespace TheHuntGame.Network.Data
         [SerializeField]
         private long id;
 
-        [SerializeField] 
+        [SerializeField]
         private string playerName;
-    }
-    
-    [Serializable]
-    public class PlayerDataResponse : ResponseBodyWithSingleEntity<PlayerData>
-    {
-        public static PlayerDataResponse FromJson(string jsonString)
-        {
-            return JsonUtility.FromJson<PlayerDataResponse>(jsonString);
-        }
-    }
 
+
+        public long Id
+        {
+            get => id;
+            set => id = value;
+        }
+
+        public string PlayerName
+        {
+            get => playerName;
+            set => playerName = value;
+        }
+
+        public static PlayerData FromJson(string jsonString)
+        {
+            return JsonUtility.FromJson<PlayerData>(jsonString);
+        }
+        
+    }
 }

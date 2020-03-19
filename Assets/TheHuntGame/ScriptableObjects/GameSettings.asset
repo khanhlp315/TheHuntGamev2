@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5272e7c012554c91aa55ffcec16901c0, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  AnimalStartPosition: {x: 1100, y: 50}
+  AnimalEndPosition: {x: -1375, y: 50}
+  AnimalOffsetDistance: 275
+  AnimalMovementSpeed: 400
+  AnimalEscapeSpeed: 600
+  Characters:
+  - {fileID: 1130528273, guid: a51b973e6137f4eaf956e965fa7b7303, type: 3}
+  - {fileID: 1480422326, guid: 37a4db24de25c4a038b9904087417acb, type: 3}
+  - {fileID: 1841938679, guid: b7843c16c60ce4b5fbba039a428eea93, type: 3}
+  - {fileID: 884444583, guid: 5ca9f174cad5a47789fe56b09986aa65, type: 3}
+  - {fileID: 734114805378767262, guid: e7d4d20b99e504af194469c11f0c3666, type: 3}
+  - {fileID: 1922629364, guid: 3c91b6975d29142529f478a320aa9d1a, type: 3}
+  - {fileID: 3317424372206374214, guid: 1013ff0c7b08a4c189beae8ebd3bb22e, type: 3}
+  - {fileID: 7182923523281158857, guid: d27fb170d158d4d1291c0c3ca8e0f587, type: 3}
+  - {fileID: 759087307, guid: 1ec5cd0af5fc54ec2b30a4290dc2a959, type: 3}

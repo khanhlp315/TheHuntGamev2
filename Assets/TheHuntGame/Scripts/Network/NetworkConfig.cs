@@ -7,5 +7,6 @@ namespace TheHuntGame.Network
     {
         public string BaseUrl = "https://game-machines.herokuapp.com";
         public string CreatePlayerPath = "players";
+        public string CreateGamePath = "games";
     }
 }
