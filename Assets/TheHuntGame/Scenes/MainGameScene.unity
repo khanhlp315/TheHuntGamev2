@@ -4301,7 +4301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameSettings: {fileID: 11400000, guid: 4fb937d0543be4395a0d3e3b4be8c305, type: 2}
-  _characters: []
   _coinsText: {fileID: 2055038798}
   _logo: {fileID: 2055038796}
 --- !u!4 &1918635715

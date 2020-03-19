@@ -62,7 +62,7 @@ namespace TheHuntGame.Scenes
                 animal.StartPosition = _gameSettings.AnimalStartPosition.x;
                 animal.EndPosition = _gameSettings.AnimalEndPosition.x;
                 animal.MovementSpeed = _gameSettings.AnimalMovementSpeed;
-
+                animal._coinsText.text = animalData.AnimalValue.ToString();
                 animal.transform.position = _gameSettings.AnimalStartPosition +
                                             animalsCount * _gameSettings.AnimalOffsetDistance * Vector2.right;
                 _animals.Add(animal);

@@ -20,7 +20,7 @@ namespace TheHuntGame.MainGame
         [SerializeField] private GameSettings _gameSetting;
 
         private GameState _gameState;
-        
+
         private int _coins = 0;
 
         private List<AnimalData> _animals;
@@ -29,7 +29,16 @@ namespace TheHuntGame.MainGame
         {
             _gameState = GameState.Waiting;
             EventSystem.EventSystem.Instance.Bind<CoinInsertEvent>(OnCoinInserted);
+
+            EventSystem.EventSystem.Instance.Bind<AnimalCatchEvent>(OnAnimalCatch);
         }
+
+        private void OnAnimalCatch(AnimalCatchEvent e)
+        {
+            
+        }
+
+
 
         private void OnCoinInserted(CoinInsertEvent e)
         {
@@ -38,12 +47,15 @@ namespace TheHuntGame.MainGame
             {
                 NumberOfCoins = _coins
             });
-            
+
             if (_gameState == GameState.Waiting)
             {
                 StartGame();
             }
         }
+
+
+      
 
         private void StartGame()
         {

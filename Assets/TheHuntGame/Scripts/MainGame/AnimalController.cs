@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class AnimalController : MonoBehaviour
 {
@@ -18,9 +19,13 @@ public class AnimalController : MonoBehaviour
     [NonSerialized]
     public float EndPosition;
 
+    [Header("------------Coin---------------")]
+    [SerializeField]
+    public Text _coinsText;
     // Use this for initialization
     void Start()
     {
+
     }
     
     
