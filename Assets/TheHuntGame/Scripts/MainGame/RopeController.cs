@@ -1,22 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public class RopeController : MonoBehaviour
+namespace TheHuntGame.MainGame
 {
-
-
-    public virtual void StartCatch(int numberAnimal) {
-
-    }
-    // Start is called before the first frame update
-    void Start()
+    public class RopeController : MonoBehaviour
     {
+        public GameObject b1;
+        public GameObject b2;
+        public GameObject b3;
 
-    }
+        public virtual void StartCatch(int numberAnimal)
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
+        }
+        // Start is called before the first frame update
+        void Start()
+        {
 
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }

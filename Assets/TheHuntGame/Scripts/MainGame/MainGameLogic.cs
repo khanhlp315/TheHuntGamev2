@@ -31,10 +31,16 @@ namespace TheHuntGame.MainGame
         {
             _gameState = GameState.Waiting;
             EventSystem.EventSystem.Instance.Bind<CoinInsertEvent>(OnCoinInserted);
+            EventSystem.EventSystem.Instance.Bind<GameStartedEvent>(OnGameStarted);
 
             
         }
 
+        private void OnGameStarted(GameStartedEvent e)
+        {
+            _gameState = GameState.Running;
+
+        }
 
         private void Update()
         {
@@ -66,10 +72,14 @@ namespace TheHuntGame.MainGame
             {
                 NumberOfCoins = _coins
             });
-
+            
             if (_gameState == GameState.Waiting)
             {
                 StartGame();
+            }
+            if(_gameState == GameState.Running)
+            {
+                EventSystem.EventSystem.Instance.Emit<RopeUpdatedEvent>();
             }
         }
 
@@ -78,7 +88,7 @@ namespace TheHuntGame.MainGame
 
         private void StartGame()
         {
-            _gameState = GameState.Running;
+        
             Network.Network.Instance.CreatePlayer(String.Empty, (playerData) =>
             {
                 Network.Network.Instance.CreateGame(playerData.Id, (gameData) =>
