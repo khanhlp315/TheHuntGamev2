@@ -1,0 +1,41 @@
+
+nutbamgif.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Group 2
+  rotate: false
+  xy: 2, 2
+  size: 195, 122
+  orig: 195, 122
+  offset: 0, 0
+  index: -1
+Group 5
+  rotate: false
+  xy: 536, 151
+  size: 157, 79
+  orig: 157, 79
+  offset: 0, 0
+  index: -1
+Group 7
+  rotate: false
+  xy: 199, 67
+  size: 125, 57
+  orig: 125, 57
+  offset: 0, 0
+  index: -1
+Shape 4 copy 3
+  rotate: false
+  xy: 2, 126
+  size: 333, 104
+  orig: 333, 104
+  offset: 0, 0
+  index: -1
+hand copy
+  rotate: true
+  xy: 337, 61
+  size: 169, 197
+  orig: 169, 197
+  offset: 0, 0
+  index: -1

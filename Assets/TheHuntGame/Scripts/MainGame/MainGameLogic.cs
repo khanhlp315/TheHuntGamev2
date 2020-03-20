@@ -23,19 +23,14 @@ namespace TheHuntGame.MainGame
 
         private int _coins = 0;
 
+        private int _ropes = 0;
+
         private List<AnimalData> _animals;
 
         private void Awake()
         {
             _gameState = GameState.Waiting;
             EventSystem.EventSystem.Instance.Bind<CoinInsertEvent>(OnCoinInserted);
-
-            EventSystem.EventSystem.Instance.Bind<AnimalCatchEvent>(OnAnimalCatch);
-        }
-
-        private void OnAnimalCatch(AnimalCatchEvent e)
-        {
-            
         }
 
 
@@ -51,6 +46,17 @@ namespace TheHuntGame.MainGame
             if (_gameState == GameState.Waiting)
             {
                 StartGame();
+            }
+            else
+            {
+                if (_ropes < _gameSetting.MaxRopes)
+                {
+                    _ropes++;
+                    EventSystem.EventSystem.Instance.Emit(new RopeUpdatedEvent
+                    {
+                        NumberOfRopes = _ropes
+                    });
+                }
             }
         }
 
@@ -69,6 +75,11 @@ namespace TheHuntGame.MainGame
                     EventSystem.EventSystem.Instance.Emit(new GameStartEvent()
                     {
                         Animals = _animals
+                    });
+                    _ropes++;
+                    EventSystem.EventSystem.Instance.Emit(new RopeUpdatedEvent
+                    {
+                        NumberOfRopes = _ropes
                     });
                 }, (error) =>
                 {

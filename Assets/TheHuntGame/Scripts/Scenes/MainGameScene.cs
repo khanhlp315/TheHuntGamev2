@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using TheHuntGame.EventSystem.Events;
+using TheHuntGame.MainGame;
 using TheHuntGame.MainGame.Settings;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,9 +22,17 @@ namespace TheHuntGame.Scenes
         [Header("------------UI---------------")]
         [SerializeField]
         private Text _coinsText;
-        public GameObject _logo;
+        [SerializeField]
+        private GameObject _logo;
 
-        
+        [Header("------------Rope---------------")]
+        [SerializeField]
+        private Animator _ropePreparation;
+        [SerializeField]
+        private GameObject[] _arrows;
+        [SerializeField]
+        private RopeController[] _ropes;
+
 
         public void FakeInsertCoin()
         {
@@ -39,8 +48,18 @@ namespace TheHuntGame.Scenes
         public void RegisterEvents()
         {
             EventSystem.EventSystem.Instance.Bind<GameStartEvent>(OnGameStart);
+            EventSystem.EventSystem.Instance.Bind<RopeUpdatedEvent>(OnRopeUpdated);
             EventSystem.EventSystem.Instance.Bind<CoinsUpdatedEvent>(OnCoinsUpdated);
 
+        }
+
+        private void OnRopeUpdated(RopeUpdatedEvent e)
+        {
+            _ropePreparation.Play($"{e.NumberOfRopes}");
+            for (int i = 0; i < e.NumberOfRopes; ++i)
+            {
+                _arrows[i].gameObject.SetActive(true);
+            }
         }
 
         private void OnCoinsUpdated(CoinsUpdatedEvent e)
@@ -50,6 +69,7 @@ namespace TheHuntGame.Scenes
 
         private void OnGameStart(GameStartEvent e)
         {
+            _ropePreparation.gameObject.SetActive(true);
             _logo.gameObject.SetActive(false);
             var animalsCount = 0;
             foreach (var animalData in e.Animals)

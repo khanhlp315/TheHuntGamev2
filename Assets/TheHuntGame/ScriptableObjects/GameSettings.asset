@@ -17,6 +17,7 @@ MonoBehaviour:
   AnimalOffsetDistance: 275
   AnimalMovementSpeed: 400
   AnimalEscapeSpeed: 600
+  MaxRopes: 5
   Characters:
   - {fileID: 1130528273, guid: a51b973e6137f4eaf956e965fa7b7303, type: 3}
   - {fileID: 1480422326, guid: 37a4db24de25c4a038b9904087417acb, type: 3}

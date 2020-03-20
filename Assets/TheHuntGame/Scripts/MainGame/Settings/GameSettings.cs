@@ -12,6 +12,7 @@ namespace TheHuntGame.MainGame.Settings
         public float AnimalOffsetDistance;
         public float AnimalMovementSpeed;
         public float AnimalEscapeSpeed;
+        public int MaxRopes;
 
         [Header("Animals")]
         public List<AnimalController> Characters;
