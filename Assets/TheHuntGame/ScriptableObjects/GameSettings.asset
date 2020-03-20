@@ -17,6 +17,11 @@ MonoBehaviour:
   AnimalOffsetDistance: 275
   AnimalMovementSpeed: 400
   AnimalEscapeSpeed: 600
+  AnimalTugSpeed: 0.5
+  CatchAnimalTime: 1
+  PressButtonTimes: 10
+  AnimalStartTugPoint: {x: 0, y: 50, z: 0}
+  AnimalEndTugPoint: {x: 0, y: -200, z: 0}
   Characters:
   - {fileID: 1130528273, guid: a51b973e6137f4eaf956e965fa7b7303, type: 3}
   - {fileID: 1480422326, guid: 37a4db24de25c4a038b9904087417acb, type: 3}

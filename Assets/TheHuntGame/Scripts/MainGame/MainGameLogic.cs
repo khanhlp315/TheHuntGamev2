@@ -13,6 +13,7 @@ namespace TheHuntGame.MainGame
         Waiting,
         Running,
         Catching,
+        Catched,
         End
     }
     public class MainGameLogic : MonoBehaviour
@@ -25,19 +26,37 @@ namespace TheHuntGame.MainGame
 
         private List<AnimalData> _animals;
 
+        private float timeToCatch = 0;
         private void Awake()
         {
             _gameState = GameState.Waiting;
             EventSystem.EventSystem.Instance.Bind<CoinInsertEvent>(OnCoinInserted);
 
-            EventSystem.EventSystem.Instance.Bind<AnimalCatchEvent>(OnAnimalCatch);
-        }
-
-        private void OnAnimalCatch(AnimalCatchEvent e)
-        {
             
         }
 
+
+        private void Update()
+        {
+            switch (_gameState) {
+                case GameState.Running:
+                    if (Input.GetKeyDown(KeyCode.A))
+                    {
+                        _gameState = GameState.Catching;
+                        EventSystem.EventSystem.Instance.Emit<AnimalCatchingEvent>();
+                    }
+
+                    break;
+                case GameState.Catching:
+                    timeToCatch += Time.deltaTime;
+                    if (timeToCatch >= _gameSetting.CatchAnimalTime) {
+                        _gameState = GameState.Catched;
+                        EventSystem.EventSystem.Instance.Emit<AnimalCatchedEvent>();
+                    }
+            
+                    break;
+            }
+        }
 
 
         private void OnCoinInserted(CoinInsertEvent e)

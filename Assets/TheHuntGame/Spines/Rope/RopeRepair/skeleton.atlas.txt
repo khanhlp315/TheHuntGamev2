@@ -1,0 +1,165 @@
+
+skeleton.png
+size: 2027,2025
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Rope_Idle/Rope01_01
+  rotate: false
+  xy: 1406, 1667
+  size: 503, 356
+  orig: 503, 356
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope01_02
+  rotate: false
+  xy: 1406, 1309
+  size: 503, 356
+  orig: 503, 356
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope01_03
+  rotate: false
+  xy: 1406, 951
+  size: 503, 356
+  orig: 503, 356
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope02_01
+  rotate: true
+  xy: 2, 10
+  size: 924, 351
+  orig: 924, 351
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope02_02
+  rotate: true
+  xy: 355, 10
+  size: 924, 351
+  orig: 924, 351
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope02_03
+  rotate: true
+  xy: 708, 10
+  size: 924, 351
+  orig: 924, 351
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope02_04
+  rotate: true
+  xy: 1061, 10
+  size: 924, 351
+  orig: 924, 351
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope03_01
+  rotate: true
+  xy: 1414, 70
+  size: 879, 366
+  orig: 879, 366
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope04_01
+  rotate: false
+  xy: 2, 1662
+  size: 1402, 361
+  orig: 1402, 361
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope04_02
+  rotate: false
+  xy: 2, 1299
+  size: 1402, 361
+  orig: 1402, 361
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope04_03
+  rotate: false
+  xy: 2, 936
+  size: 1402, 361
+  orig: 1402, 361
+  offset: 0, 0
+  index: -1
+hand_v2_001
+  rotate: false
+  xy: 1911, 1763
+  size: 114, 260
+  orig: 114, 260
+  offset: 0, 0
+  index: -1
+
+skeleton2.png
+size: 1882,1882
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Rope_Idle/Rope03_02
+  rotate: false
+  xy: 2, 2
+  size: 879, 366
+  orig: 879, 366
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope03_03
+  rotate: false
+  xy: 883, 2
+  size: 879, 366
+  orig: 879, 366
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope04_04
+  rotate: true
+  xy: 1405, 478
+  size: 1402, 361
+  orig: 1402, 361
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope05_01
+  rotate: false
+  xy: 2, 1504
+  size: 1401, 376
+  orig: 1401, 376
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope05_02
+  rotate: false
+  xy: 2, 1126
+  size: 1401, 376
+  orig: 1401, 376
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope05_03
+  rotate: false
+  xy: 2, 748
+  size: 1401, 376
+  orig: 1401, 376
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope05_04
+  rotate: false
+  xy: 2, 370
+  size: 1401, 376
+  orig: 1401, 376
+  offset: 0, 0
+  index: -1
+
+skeleton3.png
+size: 883,881
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Rope_Idle/Rope01_04
+  rotate: false
+  xy: 2, 155
+  size: 503, 356
+  orig: 503, 356
+  offset: 0, 0
+  index: -1
+Rope_Idle/Rope03_04
+  rotate: false
+  xy: 2, 513
+  size: 879, 366
+  orig: 879, 366
+  offset: 0, 0
+  index: -1

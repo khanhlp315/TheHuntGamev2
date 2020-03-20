@@ -12,6 +12,13 @@ namespace TheHuntGame.MainGame.Settings
         public float AnimalOffsetDistance;
         public float AnimalMovementSpeed;
         public float AnimalEscapeSpeed;
+        public float AnimalTugSpeed;
+        public float CatchAnimalTime;
+        public int PressButtonTimes;
+ 
+        public Vector3 AnimalStartTugPoint = new Vector3(0f, 50, 0f);
+        public Vector3 AnimalEndTugPoint = new Vector3(0f, -200, 0f);
+
 
         [Header("Animals")]
         public List<AnimalController> Characters;

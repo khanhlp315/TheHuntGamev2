@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheHuntGame.EventSystem.Events
 {
-    public struct AnimalCatchEvent : IEvent
+    public struct AnimalCatchedEvent : IEvent
     {
-
     }
 }
