@@ -76,7 +76,7 @@ public class AnimalController : MonoBehaviour
 
                 transform.position = Vector3.Lerp(new Vector3(transform.position.x, StartTugPosition, transform.position.z),
 
-                    new Vector3(transform.position.x, EndTugPosition, transform.position.z), _pressTug / MaxPressTug);
+                    new Vector3(transform.position.x, EndTugPosition, transform.position.z), _pressTug*1.0f / MaxPressTug);
             }
         }
 

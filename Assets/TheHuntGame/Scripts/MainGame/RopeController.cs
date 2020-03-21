@@ -85,7 +85,7 @@ namespace TheHuntGame.MainGame
                     _tugObject.transform.position = Vector3.Lerp(new Vector3(_tugObject.transform.position.x, StartTugPosition,
                          _tugObject.transform.position.z),
 
-                    new Vector3(_tugObject.transform.position.x, EndTugPosition, _tugObject.transform.position.z), _pressTug / MaxPressTug);
+                    new Vector3(_tugObject.transform.position.x, EndTugPosition, _tugObject.transform.position.z), _pressTug * 1.0f / MaxPressTug);
                 }
             }
         }
