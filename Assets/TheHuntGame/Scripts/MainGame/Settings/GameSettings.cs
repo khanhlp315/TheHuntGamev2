@@ -13,6 +13,11 @@ namespace TheHuntGame.MainGame.Settings
         public float AnimalMovementSpeed;
         public float AnimalEscapeSpeed;
         public int MaxRopes;
+        public float AnimalStartTugPosition = 50;
+        public float AnimalEndTugPosition = -200;
+        public float RopeStartTugPosition = -250;
+        public float RopeEndTugPosition = -500;
+        public int MaxPressTug = 20;
 
         [Header("Animals")]
         public List<AnimalController> Characters;

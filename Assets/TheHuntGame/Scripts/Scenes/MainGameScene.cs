@@ -11,14 +11,14 @@ namespace TheHuntGame.Scenes
 {
     public class MainGameScene : MonoBehaviour
     {
-        
+
         [Header("-------------Game Setting------------")]
         [SerializeField]
         private GameSettings _gameSettings;
-        
+
         [Header("------------Character---------------")]
         private List<AnimalController> _animals;
-        
+
         [Header("------------UI---------------")]
         [SerializeField]
         private Text _coinsText;
@@ -50,11 +50,76 @@ namespace TheHuntGame.Scenes
             EventSystem.EventSystem.Instance.Bind<GameStartEvent>(OnGameStart);
             EventSystem.EventSystem.Instance.Bind<RopeUpdatedEvent>(OnRopeUpdated);
             EventSystem.EventSystem.Instance.Bind<CoinsUpdatedEvent>(OnCoinsUpdated);
+            EventSystem.EventSystem.Instance.Bind<RopeThrowEvent>(OnRopeThrow);
+            EventSystem.EventSystem.Instance.Bind<RopeTugEvent>(OnRopeTug);
+
+
+        }
+
+        private void OnRopeTug(RopeTugEvent e)
+        {
+                    
+            int fromValue = 0;
+            //   int toValue = 0;
+            if (e.RopeIndex % 2 == 0)
+            {
+                fromValue = e.RopeIndex / 2;
+                //  toValue = fromValue + 1;
+            }
+            else
+            {
+                fromValue = e.RopeIndex / 2 - 1;
+                // toValue = fromValue + 1;
+
+            }
+            bool catchAnimal = false;
+            for (int i = 0; i < _animals.Count; i++)
+            {
+                var positionX = _animals[i].transform.position.x;
+                if (positionX >= _gameSettings.AnimalOffsetDistance * fromValue
+                    && positionX < _gameSettings.AnimalOffsetDistance * (fromValue + 1))
+                {
+                    if (!_animals[i].IsCatch)
+                    {
+                        _ropes[e.RopeIndex].HitTug();
+                        catchAnimal = true;
+                        _animals[i].IsCatch = true;
+                        _animals[i].transform.position = new Vector3(_gameSettings.AnimalOffsetDistance * fromValue,
+                               _animals[i].transform.position.y, _animals[i].transform.position.z);
+                        _animals[i].Resist();
+                        break;
+                    }
+
+                }
+            }
+            if (!catchAnimal)
+            {
+                _ropes[e.RopeIndex].MissedTug();
+            }
+
+
+        }
+
+        private void OnRopeThrow(RopeThrowEvent e)
+        {
+            _ropePreparation.gameObject.SetActive(false);
+
+            for (int i = 0; i < _arrows.Length; ++i)
+            {
+                _arrows[i].gameObject.SetActive(false);
+            }
+
+            for (int i = 0; i < _ropes.Length; ++i)
+            {
+                _ropes[i].Throw();
+            }
 
         }
 
         private void OnRopeUpdated(RopeUpdatedEvent e)
         {
+            _ropePreparation.gameObject.SetActive(true);
+            _logo.gameObject.SetActive(false);
             _ropePreparation.Play($"{e.NumberOfRopes}");
             for (int i = 0; i < e.NumberOfRopes; ++i)
             {
@@ -72,6 +137,13 @@ namespace TheHuntGame.Scenes
             _ropePreparation.gameObject.SetActive(true);
             _logo.gameObject.SetActive(false);
             var animalsCount = 0;
+
+            for (int i = 0; i < _ropes.Length; i++)
+            {
+                _ropes[i].MaxPressTug = _gameSettings.MaxPressTug;
+                _ropes[i].StartTugPosition = _gameSettings.RopeStartTugPosition;
+                _ropes[i].EndTugPosition = _gameSettings.RopeEndTugPosition;
+            }
             foreach (var animalData in e.Animals)
             {
                 var characterToInstantiate =
@@ -85,10 +157,14 @@ namespace TheHuntGame.Scenes
                 animal._coinsText.text = animalData.AnimalValue.ToString();
                 animal.transform.position = _gameSettings.AnimalStartPosition +
                                             animalsCount * _gameSettings.AnimalOffsetDistance * Vector2.right;
+                animal.StartTugPosition = _gameSettings.AnimalStartTugPosition;
+                animal.EndTugPosition = _gameSettings.AnimalEndTugPosition;
+                animal.MaxPressTug = _gameSettings.MaxPressTug;
                 _animals.Add(animal);
 
                 animalsCount++;
             }
+            EventSystem.EventSystem.Instance.Emit(new GameStartedEvent());
         }
     }
 }

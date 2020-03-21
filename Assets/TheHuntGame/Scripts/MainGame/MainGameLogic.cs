@@ -11,6 +11,7 @@ namespace TheHuntGame.MainGame
     enum GameState
     {
         Waiting,
+        Starting,
         Running,
         Catching,
         End
@@ -31,9 +32,13 @@ namespace TheHuntGame.MainGame
         {
             _gameState = GameState.Waiting;
             EventSystem.EventSystem.Instance.Bind<CoinInsertEvent>(OnCoinInserted);
+           EventSystem.EventSystem.Instance.Bind<GameStartedEvent>(OnGameStarted);
         }
 
-
+        private void OnGameStarted(GameStartedEvent e)
+        {
+            _gameState = GameState.Running;
+        }
 
         private void OnCoinInserted(CoinInsertEvent e)
         {
@@ -47,7 +52,7 @@ namespace TheHuntGame.MainGame
             {
                 StartGame();
             }
-            else
+            else 
             {
                 if (_ropes < _gameSetting.MaxRopes)
                 {
@@ -61,11 +66,24 @@ namespace TheHuntGame.MainGame
         }
 
 
-      
+        private void Update()
+        {
+            switch (_gameState)
+            {
+                case GameState.Running:               
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        EventSystem.EventSystem.Instance.Emit(new RopeThrowEvent());
+                        _gameState = GameState.Catching;
+                    }
+                    break;
+                
+            }
+        }
 
         private void StartGame()
         {
-            _gameState = GameState.Running;
+            _gameState = GameState.Starting;
             Network.Network.Instance.CreatePlayer(String.Empty, (playerData) =>
             {
                 Network.Network.Instance.CreateGame(playerData.Id, (gameData) =>
@@ -81,6 +99,7 @@ namespace TheHuntGame.MainGame
                     {
                         NumberOfRopes = _ropes
                     });
+
                 }, (error) =>
                 {
                     Debug.LogError(error);
@@ -89,6 +108,7 @@ namespace TheHuntGame.MainGame
             {
                 Debug.LogError(error);
             });
+           
         }
     }
 }
