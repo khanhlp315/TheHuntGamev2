@@ -29,7 +29,7 @@ public class AnimalController : MonoBehaviour
 
     [Header("------------Coin---------------")]
     [SerializeField]
-    public Text _coinsText;
+    public TextMesh _coinsText;
 
     [NonSerialized]
     public bool IsCatch = false;
@@ -37,20 +37,26 @@ public class AnimalController : MonoBehaviour
     [NonSerialized]
     public int MaxPressTug = 0;
 
+    [SerializeField]
+    private MeshRenderer coinRender;
+
     private int _pressTug = 0;
   
-
+    public void Init()
+    {
+        coinRender.sortingOrder = 26;
+    }
     public void Resist()
     {
         GetComponent<Animator>().Play("resist");
         IsCatch = true;
         GetComponent<SkeletonAnimator>().GetComponent<MeshRenderer>().sortingOrder = 40;
-        GetComponentInChildren<Canvas>().sortingOrder = 40;
+        coinRender.sortingOrder = 41;
     }
     // Use this for initialization
     void Start()
     {
-
+        coinRender.sortingOrder = 26;
     }
     
     

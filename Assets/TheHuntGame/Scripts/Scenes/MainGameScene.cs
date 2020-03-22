@@ -68,7 +68,7 @@ namespace TheHuntGame.Scenes
             }
             else
             {
-                fromValue = e.RopeIndex / 2 - 1;
+                fromValue = - (e.RopeIndex / 2 )- 1;
                 // toValue = fromValue + 1;
 
             }
@@ -81,6 +81,7 @@ namespace TheHuntGame.Scenes
                 {
                     if (!_animals[i].IsCatch)
                     {
+                        
                         _ropes[e.RopeIndex].HitTug();
                         catchAnimal = true;
                         _animals[i].IsCatch = true;
@@ -160,6 +161,7 @@ namespace TheHuntGame.Scenes
                 animal.StartTugPosition = _gameSettings.AnimalStartTugPosition;
                 animal.EndTugPosition = _gameSettings.AnimalEndTugPosition;
                 animal.MaxPressTug = _gameSettings.MaxPressTug;
+                animal.Init();
                 _animals.Add(animal);
 
                 animalsCount++;
