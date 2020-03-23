@@ -17,6 +17,9 @@ namespace TheHuntGame.MainGame.Settings
         public float AnimalEndTugPosition = -200;
         public float RopeStartTugPosition = -250;
         public float RopeEndTugPosition = -500;
+        public float StartCatchPosition = 800;
+        public float EndCatchPosition = -100;
+
         public int MaxPressTug = 20;
 
         [Header("Animals")]

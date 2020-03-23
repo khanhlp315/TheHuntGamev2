@@ -88,6 +88,23 @@ namespace TheHuntGame.Network
                 }
             }, requestBody));
         }
-
+        public void StartGame(long gameId, GameStartData gameStartData, UnityAction<GameData> onDone = null, UnityAction<long> onError = null)
+        {
+            var requestBody = GameStartData.ToJson(gameStartData);
+            var startGamePath = string.Format(_config.StartGamePath, gameId);
+            StartCoroutine(SendPostRequest(startGamePath, (json, responseCode) =>
+            {
+                if (responseCode == 200)
+                {
+                    var gameData = GameData.FromJson(json);
+                    onDone?.Invoke(gameData);
+                }
+                else
+                {
+                    Debug.Log(json);
+                    onError?.Invoke(responseCode);
+                }
+            }, requestBody));
+        }
     }
 }

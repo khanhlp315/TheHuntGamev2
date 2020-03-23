@@ -28,11 +28,38 @@ namespace TheHuntGame.MainGame
 
         private List<AnimalData> _animals;
 
+        private GameStartData gameStartData;
+
+        private long gameId;
+
         private void Awake()
         {
             _gameState = GameState.Waiting;
+            gameStartData = new GameStartData();
             EventSystem.EventSystem.Instance.Bind<CoinInsertEvent>(OnCoinInserted);
-           EventSystem.EventSystem.Instance.Bind<GameStartedEvent>(OnGameStarted);
+            EventSystem.EventSystem.Instance.Bind<GameStartedEvent>(OnGameStarted);
+            EventSystem.EventSystem.Instance.Bind<AnimalCatchEvent>(OnAnimalCatch);
+        }
+
+        private void OnAnimalCatch(AnimalCatchEvent e)
+        {
+            gameStartData.SelectedAnimalIds.Add(e.Id);
+            //start game
+            if (e.RopeIndex == _ropes - 1)
+            {
+                gameStartData.CoinsUsed = _ropes;
+                Network.Network.Instance.StartGame(gameId, gameStartData, (gameData) =>
+                 {
+
+                     EventSystem.EventSystem.Instance.Emit(new GameCaughtEvent()
+                     {
+                         SelectedAnimals = gameData.SelectedAnimals
+                     });
+                 }, (error) =>
+                 {
+                     Debug.LogError(error);
+                 });
+            }
         }
 
         private void OnGameStarted(GameStartedEvent e)
@@ -52,11 +79,12 @@ namespace TheHuntGame.MainGame
             {
                 StartGame();
             }
-            else 
+            else
             {
                 if (_ropes < _gameSetting.MaxRopes)
                 {
                     _ropes++;
+          
                     EventSystem.EventSystem.Instance.Emit(new RopeUpdatedEvent
                     {
                         NumberOfRopes = _ropes
@@ -70,14 +98,14 @@ namespace TheHuntGame.MainGame
         {
             switch (_gameState)
             {
-                case GameState.Running:               
+                case GameState.Running:
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
                         EventSystem.EventSystem.Instance.Emit(new RopeThrowEvent());
                         _gameState = GameState.Catching;
                     }
                     break;
-                
+
             }
         }
 
@@ -88,17 +116,23 @@ namespace TheHuntGame.MainGame
             {
                 Network.Network.Instance.CreateGame(playerData.Id, (gameData) =>
                 {
+                    gameId = gameData.Id;
                     _animals = gameData.Animals;
                     _animals.Sort((a1, a2) => a1.AnimalOrder.CompareTo(a2.AnimalOrder));
                     EventSystem.EventSystem.Instance.Emit(new GameStartEvent()
                     {
                         Animals = _animals
                     });
-                    _ropes++;
-                    EventSystem.EventSystem.Instance.Emit(new RopeUpdatedEvent
+
+                    if (_ropes < _gameSetting.MaxRopes)
                     {
-                        NumberOfRopes = _ropes
-                    });
+                        _ropes++;
+                        EventSystem.EventSystem.Instance.Emit(new RopeUpdatedEvent
+                        {
+                            NumberOfRopes = _ropes
+                        });
+                    }
+
 
                 }, (error) =>
                 {
@@ -108,7 +142,7 @@ namespace TheHuntGame.MainGame
             {
                 Debug.LogError(error);
             });
-           
+
         }
     }
 }

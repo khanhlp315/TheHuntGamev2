@@ -4,12 +4,18 @@ using System.Collections;
 using UnityEngine.UI;
 using Spine.Unity;
 using TheHuntGame.GameMachine;
+using DG.Tweening;
+using TheHuntGame.EventSystem;
+using TheHuntGame.EventSystem.Events;
 
 public class AnimalController : MonoBehaviour
 {
     [NonSerialized]
     public int Coins = 0;
-    
+
+    [NonSerialized]
+    public long Id;
+
     public string CharacterName ;
 
     [NonSerialized]
@@ -35,13 +41,28 @@ public class AnimalController : MonoBehaviour
     public bool IsCatch = false;
 
     [NonSerialized]
+    public int ropeIndex;
+
+    [NonSerialized]
     public int MaxPressTug = 0;
+
+    [NonSerialized]
+    public float StartCatchPosition = 0;
+
+    [NonSerialized]
+    public float EndCatchPosition = 0;
 
     [SerializeField]
     private MeshRenderer coinRender;
 
     private int _pressTug = 0;
-  
+
+    private bool _tug = false;
+
+    private Vector3 positionA = Vector3.zero;
+    private Vector3 positionB = Vector3.zero;
+    private Vector3 positionC = Vector3.zero;
+
     public void Init()
     {
         coinRender.sortingOrder = 26;
@@ -50,8 +71,38 @@ public class AnimalController : MonoBehaviour
     {
         GetComponent<Animator>().Play("resist");
         IsCatch = true;
+        _tug = true;
         GetComponent<SkeletonAnimator>().GetComponent<MeshRenderer>().sortingOrder = 40;
         coinRender.sortingOrder = 41;
+    }
+
+    public void Caught()
+    {
+     
+        GetComponent<Animator>().Play("catched");
+      
+        positionA = transform.position;
+        positionB = positionA + new Vector3(0, StartCatchPosition, 0);
+        positionC = positionA + new Vector3(0, EndCatchPosition, 0);
+
+        Sequence throwSequence = DOTween.Sequence();
+        //day chay len lan 1
+        
+        throwSequence.Append(transform.DOMove(positionB, 1f));
+        //day chay len lan 2
+        throwSequence.Append(transform.DOMove(positionC , 1f));
+        throwSequence.AppendCallback(() =>
+        {
+            //sau khi nem xong
+            
+
+            //EventSystem.EventSystem.Instance.Emit(new RopeTugEvent()
+            //{
+            //    RopeIndex = _ropeIndex
+            //});
+
+        });
+        _coinsText.gameObject.SetActive(false);
     }
     // Use this for initialization
     void Start()
@@ -74,9 +125,16 @@ public class AnimalController : MonoBehaviour
             transform.position = position;
 
         }
-        else
+        else if(_tug)
         {
-            if (GameMachine.Instance.GetButtonDown(GameMachineButtonCode.CENTER) || Input.GetKeyDown(KeyCode.Space))
+          
+            if(transform.position.y == EndTugPosition)
+            {
+                EventSystem.Instance.Emit(new AnimalCatchEvent() { Id = Id, RopeIndex = ropeIndex });
+                _tug = false;
+
+            }
+            else if (GameMachine.Instance.GetButtonDown(GameMachineButtonCode.CENTER) || Input.GetKeyDown(KeyCode.Space))
             {
                 _pressTug += 1;
 
