@@ -1476,9 +1476,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ropeIndex: 4
-  _throwObject: {fileID: 0}
-  _tugObject: {fileID: 0}
-  _caughtObject: {fileID: 0}
+  _throwObject: {fileID: 752216377}
+  _tugObject: {fileID: 662224359}
+  _caughtObject: {fileID: 1188348940}
 --- !u!1 &326307320
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,9 +3342,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ropeIndex: 3
-  _throwObject: {fileID: 0}
-  _tugObject: {fileID: 0}
-  _caughtObject: {fileID: 0}
+  _throwObject: {fileID: 2056869246}
+  _tugObject: {fileID: 334442339}
+  _caughtObject: {fileID: 1065658468}
 --- !u!1 &1017624845
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,7 +3398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -4777,7 +4777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1268696447
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7784,7 +7784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2013967043
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7972,7 +7972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: abc
+  m_Text: 0
 --- !u!114 &2055038798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8004,7 +8004,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: abc
+  m_Text: 0
 --- !u!1 &2055038799
 GameObject:
   m_ObjectHideFlags: 0
