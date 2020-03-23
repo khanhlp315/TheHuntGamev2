@@ -52,6 +52,9 @@ public class AnimalController : MonoBehaviour
     [NonSerialized]
     public float EndCatchPosition = 0;
 
+    [NonSerialized]
+    public float EscapePosition = 0;
+
     [SerializeField]
     private MeshRenderer coinRender;
 
@@ -59,9 +62,6 @@ public class AnimalController : MonoBehaviour
 
     private bool _tug = false;
 
-    private Vector3 positionA = Vector3.zero;
-    private Vector3 positionB = Vector3.zero;
-    private Vector3 positionC = Vector3.zero;
 
     public void Init()
     {
@@ -81,9 +81,9 @@ public class AnimalController : MonoBehaviour
      
         GetComponent<Animator>().Play("catched");
       
-        positionA = transform.position;
-        positionB = positionA + new Vector3(0, StartCatchPosition, 0);
-        positionC = positionA + new Vector3(0, EndCatchPosition, 0);
+
+        var positionB = transform.position + new Vector3(0, StartCatchPosition, 0);
+        var positionC = transform.position + new Vector3(0, EndCatchPosition, 0);
 
         Sequence throwSequence = DOTween.Sequence();
         //day chay len lan 1
@@ -103,6 +103,28 @@ public class AnimalController : MonoBehaviour
 
         });
         _coinsText.gameObject.SetActive(false);
+    }
+
+    public void Escape()
+    {
+        Sequence throwSequence = DOTween.Sequence();
+        GetComponent<Animator>().Play("win");
+   
+        //day chay len lan 1
+
+        throwSequence.Append(transform.DOMove(transform.position + new Vector3(0, EscapePosition,0), 1f));
+
+        throwSequence.AppendCallback(() =>
+        {
+            //sau khi nem xong
+
+
+            //EventSystem.EventSystem.Instance.Emit(new RopeTugEvent()
+            //{
+            //    RopeIndex = _ropeIndex
+            //});
+
+        });
     }
     // Use this for initialization
     void Start()

@@ -12,13 +12,14 @@ namespace TheHuntGame.MainGame
         [SerializeField] private Transform _throwObject;
         [SerializeField] private Transform _tugObject;
         [SerializeField] private Transform _caughtObject;
+        [SerializeField] private Transform _caughtStartObject;
+        [SerializeField] private Transform _caughtEndObject;
 
         [NonSerialized]
         public float StartTugPosition;
 
         [NonSerialized]
         public float EndTugPosition;
-
 
         [NonSerialized]
         public bool _tug;
@@ -36,12 +37,17 @@ namespace TheHuntGame.MainGame
 
         private bool _isUsed = false;
 
-        private Vector3 positionA = Vector3.zero;
-        private Vector3 positionB = Vector3.zero;
-        private Vector3 positionC = Vector3.zero;
         private void Awake()
         {
             EventSystem.EventSystem.Instance.Bind<RopeUpdatedEvent>(OnRopeUpdated);
+        }
+
+        public void Reset()
+        {
+            _caughtEndObject.gameObject.SetActive(false);
+            _caughtObject.gameObject.SetActive(false);
+            _pressTug = 0;
+            _isUsed = false;
         }
 
         public void HitTug()
@@ -74,13 +80,14 @@ namespace TheHuntGame.MainGame
                 throwSequence.Append(_throwObject.transform.DOMoveY(_throwObject.position.y + 375, 0.5f));
                 throwSequence.AppendCallback(() =>
                 {
+
                     //sau khi nem xong
-                     _throwObject.gameObject.SetActive(false);
+                    _throwObject.gameObject.SetActive(false);
                     EventSystem.EventSystem.Instance.Emit(new RopeTugEvent()
                     {
                         RopeIndex = _ropeIndex
                     });
-                   
+
                 });
             }
         }
@@ -91,9 +98,12 @@ namespace TheHuntGame.MainGame
             _tugObject.gameObject.SetActive(false);
             _caughtObject.gameObject.SetActive(true);
 
-            positionA = _caughtObject.transform.position;
-            positionB = positionA + new Vector3(0, StartCatchPosition,0);
-            positionC = positionA + new Vector3(0, EndCatchPosition, 0);
+            _caughtEndObject.gameObject.SetActive(false);
+            _caughtStartObject.gameObject.SetActive(true);
+
+
+            var positionB = _caughtObject.transform.position + new Vector3(0, StartCatchPosition, 0);
+            var positionC = _caughtObject.transform.position + new Vector3(0, EndCatchPosition, 0);
 
             Sequence throwSequence = DOTween.Sequence();
             //day chay len lan 1
@@ -101,17 +111,33 @@ namespace TheHuntGame.MainGame
             throwSequence.Append(_caughtObject.transform.DOMove(positionB, 1f));
             //day chay len lan 2
             throwSequence.Append(_caughtObject.transform.DOMove(positionC, 1f));
+
             throwSequence.AppendCallback(() =>
             {
                 //sau khi nem xong
-
-
+                _caughtStartObject.gameObject.SetActive(false);
+                _caughtEndObject.gameObject.SetActive(true);
+                EventSystem.EventSystem.Instance.Emit(new GameResultEvent());
                 //EventSystem.EventSystem.Instance.Emit(new RopeTugEvent()
                 //{
                 //    RopeIndex = _ropeIndex
                 //});
 
             });
+
+        }
+
+
+        public void Break()
+        {
+            _tug = false;
+            _throwObject.gameObject.SetActive(false);
+            _tugObject.gameObject.SetActive(false);
+            _caughtObject.gameObject.SetActive(false);
+
+            _caughtEndObject.gameObject.SetActive(false);
+            _caughtObject.gameObject.SetActive(false);
+
 
         }
         private void Update()

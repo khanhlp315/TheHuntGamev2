@@ -19,6 +19,7 @@ namespace TheHuntGame.MainGame.Settings
         public float RopeEndTugPosition = -500;
         public float StartCatchPosition = 800;
         public float EndCatchPosition = -100;
+        public float EscapePosition = 150;
 
         public int MaxPressTug = 20;
 

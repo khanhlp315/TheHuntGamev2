@@ -106,5 +106,24 @@ namespace TheHuntGame.Network
                 }
             }, requestBody));
         }
+
+        public void EndGame(long gameId, int coinsEarned, UnityAction<GameData> onDone = null, UnityAction<long> onError = null)
+        {
+            var requestBody = $"{{\"coinsEarned\": {coinsEarned}}}";
+            var endGamePath = string.Format(_config.EndGamePath, gameId);
+            StartCoroutine(SendPostRequest(endGamePath, (json, responseCode) =>
+            {
+                if (responseCode == 200)
+                {
+                    var gameData = GameData.FromJson(json);
+                    onDone?.Invoke(gameData);
+                }
+                else
+                {
+                    Debug.Log(json);
+                    onError?.Invoke(responseCode);
+                }
+            }, requestBody));
+        }
     }
 }

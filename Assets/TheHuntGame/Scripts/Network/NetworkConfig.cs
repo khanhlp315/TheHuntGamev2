@@ -9,5 +9,6 @@ namespace TheHuntGame.Network
         public string CreatePlayerPath = "players";
         public string CreateGamePath = "games";
         public string StartGamePath = "games/{0}/start";
+        public string EndGamePath = "games/{0}/end";
     }
 }

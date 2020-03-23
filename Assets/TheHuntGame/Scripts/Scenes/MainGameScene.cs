@@ -1,7 +1,9 @@
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using TheHuntGame.EventSystem.Events;
+using TheHuntGame.GameMachine;
 using TheHuntGame.MainGame;
 using TheHuntGame.MainGame.Settings;
 using UnityEngine;
@@ -22,18 +24,43 @@ namespace TheHuntGame.Scenes
         [Header("------------UI---------------")]
         [SerializeField]
         private Text _coinsText;
+
+        [SerializeField]
+        private Text _resultCoinsText;
+
         [SerializeField]
         private GameObject _logo;
 
+        [SerializeField]
+        private GameObject _winPopup;
+
         [Header("------------Rope---------------")]
+
         [SerializeField]
         private Animator _ropePreparation;
+
         [SerializeField]
         private GameObject[] _arrows;
+
         [SerializeField]
         private RopeController[] _ropes;
 
+        [SerializeField]
+        private GameObject[] _brokenRopes;
 
+        [SerializeField]
+        private GameObject _hand;
+
+        [SerializeField]
+        private GameObject _knot;
+
+        private bool _tug;
+
+        private int _pressTug;
+
+        private int _earnCoins;
+
+        private bool _gameEnd;
         public void FakeInsertCoin()
         {
             EventSystem.EventSystem.Instance.Emit<CoinInsertEvent>();
@@ -54,12 +81,41 @@ namespace TheHuntGame.Scenes
             EventSystem.EventSystem.Instance.Bind<RopeTugEvent>(OnRopeTug);
             EventSystem.EventSystem.Instance.Bind<GameResultEvent>(OnGameResult);
             EventSystem.EventSystem.Instance.Bind<GameCaughtEvent>(OnGameCaught);
+            EventSystem.EventSystem.Instance.Bind<GameResetEvent>(OnGameReset);
 
 
         }
 
+        private void OnGameReset(GameResetEvent e)
+        {
+            _earnCoins = 0;
+            _gameEnd = false;
+            _logo.SetActive(true);
+            _winPopup.SetActive(false);
+            _knot.SetActive(false);
+            _hand.SetActive(false);
+            foreach (var animal in _animals)
+            {
+                Destroy(animal);
+            }
+            foreach (var rope in _ropes)
+            {
+                rope.Reset();
+
+            }
+            for (int i = 0; i < _brokenRopes.Length; i++)
+            {
+                _brokenRopes[i].SetActive(false);
+
+            }
+            //call start game
+        }
+
         private void OnGameCaught(GameCaughtEvent e)
         {
+            var escapeNumber = 0;
+            _knot.SetActive(false);
+           
             foreach (var selectedAnimal in e.SelectedAnimals)
             {
                 //catched animal
@@ -70,19 +126,81 @@ namespace TheHuntGame.Scenes
                     {
                         catchedAnimal.Caught();
                         _ropes[catchedAnimal.ropeIndex].Caught();
+                        _earnCoins += selectedAnimal.AnimalValue;
                     }
                 }
+                else
+                {
+                    var escapeAnimal = _animals.FirstOrDefault((animal) => animal.Id == selectedAnimal.Id);
+                    _ropes[escapeAnimal.ropeIndex].Break();
+                    escapeAnimal.Escape();
+                    escapeNumber++;
+                }
             }
+            for (int i = 0; i < _brokenRopes.Length; i++)
+            {
+                if (i == escapeNumber - 1)
+                {
+                    _brokenRopes[escapeNumber - 1].SetActive(true);
+                }
+                else
+                {
+                    _brokenRopes[i].SetActive(false);
+                }
+
+            }
+
+
         }
 
         private void OnGameResult(GameResultEvent e)
         {
-           
+            _winPopup.SetActive(true);
+            _resultCoinsText.text = _earnCoins.ToString();
+
+            if (!_gameEnd)
+            {
+                _gameEnd = true;
+                Sequence throwSequence = DOTween.Sequence();
+
+                throwSequence.AppendInterval(5f);
+
+                throwSequence.AppendCallback(() =>
+                {
+                    EventSystem.EventSystem.Instance.Emit(new GameEndEvent());
+                });
+            }
+
+
         }
 
+        private void Update()
+        {
+            if (_tug)
+            {
+                if (_knot.transform.position.y == _gameSettings.RopeEndTugPosition)
+                {
+                    _tug = false;
+
+                }
+                else if (GameMachine.GameMachine.Instance.GetButtonDown(GameMachineButtonCode.CENTER) || Input.GetKeyDown(KeyCode.Space))
+                {
+                    _pressTug += 1;
+                    Vector3 newPos = Vector3.Lerp(new Vector3(_knot.transform.position.x,
+                        _gameSettings.RopeStartTugPosition, _knot.transform.position.z),
+
+                        new Vector3(_knot.transform.position.x, _gameSettings.RopeEndTugPosition,
+                        _knot.transform.position.z), _pressTug * 1.0f / _gameSettings.MaxPressTug);
+
+                    _knot.transform.position = newPos;
+                }
+            }
+        }
         private void OnRopeTug(RopeTugEvent e)
         {
-
+            _hand.SetActive(true);
+            _knot.SetActive(true);
+            _tug = true;
             int fromValue = 0;
             if (e.RopeIndex % 2 == 0)
             {
@@ -110,7 +228,7 @@ namespace TheHuntGame.Scenes
                         _animals[i].transform.position = new Vector3(_gameSettings.AnimalOffsetDistance * fromValue,
                                _animals[i].transform.position.y, _animals[i].transform.position.z);
                         _animals[i].Resist();
-                      
+
                         break;
                     }
 
@@ -145,6 +263,8 @@ namespace TheHuntGame.Scenes
             _ropePreparation.gameObject.SetActive(true);
             _logo.gameObject.SetActive(false);
             _ropePreparation.Play($"{e.NumberOfRopes}");
+         
+
             for (int i = 0; i < e.NumberOfRopes; ++i)
             {
                 _arrows[i].gameObject.SetActive(true);
@@ -190,6 +310,7 @@ namespace TheHuntGame.Scenes
                 animal.Id = animalData.Id;
                 animal.StartCatchPosition = _gameSettings.StartCatchPosition;
                 animal.EndCatchPosition = _gameSettings.EndCatchPosition;
+                animal.EscapePosition = _gameSettings.EscapePosition;
                 animal.Init();
                 _animals.Add(animal);
 

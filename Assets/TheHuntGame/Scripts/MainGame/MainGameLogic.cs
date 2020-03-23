@@ -28,27 +28,63 @@ namespace TheHuntGame.MainGame
 
         private List<AnimalData> _animals;
 
-        private GameStartData gameStartData;
+        private GameStartData _gameStartData;
 
-        private long gameId;
+        private long _gameId;
+
+        private int _ropeCatch = 0;
+
+
 
         private void Awake()
         {
             _gameState = GameState.Waiting;
-            gameStartData = new GameStartData();
+            _gameStartData = new GameStartData();
             EventSystem.EventSystem.Instance.Bind<CoinInsertEvent>(OnCoinInserted);
             EventSystem.EventSystem.Instance.Bind<GameStartedEvent>(OnGameStarted);
             EventSystem.EventSystem.Instance.Bind<AnimalCatchEvent>(OnAnimalCatch);
+            EventSystem.EventSystem.Instance.Bind<GameEndEvent>(OnGameEnd);
+        }
+
+        private void OnGameEnd(GameEndEvent e)
+        {
+            Network.Network.Instance.EndGame(_gameId, e.CoinsEarned, (gameData) =>
+            {
+                _coins = _coins - _ropes;
+                _ropes = 0;
+                _gameState = GameState.Waiting;
+                if (_coins > 0)
+                {
+                    EventSystem.EventSystem.Instance.Emit(new GameResetEvent());
+                    StartGame();
+                }
+             
+               
+
+            }, (error) =>
+            {
+                Debug.LogError(error);
+            });
         }
 
         private void OnAnimalCatch(AnimalCatchEvent e)
         {
-            gameStartData.SelectedAnimalIds.Add(e.Id);
+            _gameStartData.SelectedAnimalIds.Add(e.Id);
+            _ropeCatch++;
             //start game
-            if (e.RopeIndex == _ropes - 1)
+            if (_ropeCatch == _ropes )
             {
-                gameStartData.CoinsUsed = _ropes;
-                Network.Network.Instance.StartGame(gameId, gameStartData, (gameData) =>
+                if (_coins > _gameSetting.MaxRopes)
+                {
+                    _gameStartData.CoinsUsed = _gameSetting.MaxRopes;
+                }
+                else
+                {
+                    _gameStartData.CoinsUsed = _coins;
+                }
+
+
+                Network.Network.Instance.StartGame(_gameId, _gameStartData, (gameData) =>
                  {
 
                      EventSystem.EventSystem.Instance.Emit(new GameCaughtEvent()
@@ -84,7 +120,7 @@ namespace TheHuntGame.MainGame
                 if (_ropes < _gameSetting.MaxRopes)
                 {
                     _ropes++;
-          
+
                     EventSystem.EventSystem.Instance.Emit(new RopeUpdatedEvent
                     {
                         NumberOfRopes = _ropes
@@ -116,7 +152,7 @@ namespace TheHuntGame.MainGame
             {
                 Network.Network.Instance.CreateGame(playerData.Id, (gameData) =>
                 {
-                    gameId = gameData.Id;
+                    _gameId = gameData.Id;
                     _animals = gameData.Animals;
                     _animals.Sort((a1, a2) => a1.AnimalOrder.CompareTo(a2.AnimalOrder));
                     EventSystem.EventSystem.Instance.Emit(new GameStartEvent()
