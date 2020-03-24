@@ -73,6 +73,9 @@ namespace TheHuntGame.MainGame
             if (_isUsed)
             {
                 _throwObject.gameObject.SetActive(true);
+                Vector3 lastPosition = _throwObject.transform.position;
+                //_throwObject.transform.position = 
+                //_throwObject.GetComponent<Animator>().Play()
                 Sequence throwSequence = DOTween.Sequence();
                 //day chay len lan 1
                 throwSequence.Append(_throwObject.transform.DOMoveY(_throwObject.position.y + 100, 0.5f));
@@ -80,9 +83,10 @@ namespace TheHuntGame.MainGame
                 throwSequence.Append(_throwObject.transform.DOMoveY(_throwObject.position.y + 375, 0.5f));
                 throwSequence.AppendCallback(() =>
                 {
-
+                  
                     //sau khi nem xong
                     _throwObject.gameObject.SetActive(false);
+                    _throwObject.position = lastPosition;
                     EventSystem.EventSystem.Instance.Emit(new RopeTugEvent()
                     {
                         RopeIndex = _ropeIndex

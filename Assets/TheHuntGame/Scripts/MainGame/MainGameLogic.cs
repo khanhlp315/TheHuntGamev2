@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using TheHuntGame.EventSystem.Events;
+using TheHuntGame.GameMachine;
 using TheHuntGame.MainGame.Settings;
 using TheHuntGame.Network.Data;
 using TheHuntGame.Scenes;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace TheHuntGame.MainGame
 {
@@ -44,22 +46,36 @@ namespace TheHuntGame.MainGame
             EventSystem.EventSystem.Instance.Bind<GameStartedEvent>(OnGameStarted);
             EventSystem.EventSystem.Instance.Bind<AnimalCatchEvent>(OnAnimalCatch);
             EventSystem.EventSystem.Instance.Bind<GameEndEvent>(OnGameEnd);
+            if (Player.Instance.Coins > 0)
+            {
+                _coins = Player.Instance.Coins;
+                EventSystem.EventSystem.Instance.Emit(new CoinsUpdatedEvent() { NumberOfCoins = _coins });
+                StartGame();
+            }
+
         }
 
+        private void Start()
+        {
+          
+        }
         private void OnGameEnd(GameEndEvent e)
         {
             Network.Network.Instance.EndGame(_gameId, e.CoinsEarned, (gameData) =>
             {
                 _coins = _coins - _ropes;
+                Player.Instance.Coins = _coins;
                 _ropes = 0;
                 _gameState = GameState.Waiting;
-                if (_coins > 0)
-                {
-                    EventSystem.EventSystem.Instance.Emit(new GameResetEvent());
-                    StartGame();
-                }
-             
-               
+                EventSystem.EventSystem.Instance.ClearAll();
+                SceneManager.LoadScene("MainGameScene");
+                //EventSystem.EventSystem.Instance.Emit(new GameResetEvent() { Coins = _coins });
+                //if (_coins > 0)
+                //{
+                //    StartGame();
+                //}
+
+
 
             }, (error) =>
             {
@@ -72,7 +88,7 @@ namespace TheHuntGame.MainGame
             _gameStartData.SelectedAnimalIds.Add(e.Id);
             _ropeCatch++;
             //start game
-            if (_ropeCatch == _ropes )
+            if (_ropeCatch == _ropes)
             {
                 if (_coins > _gameSetting.MaxRopes)
                 {
@@ -147,6 +163,7 @@ namespace TheHuntGame.MainGame
 
         private void StartGame()
         {
+
             _gameState = GameState.Starting;
             Network.Network.Instance.CreatePlayer(String.Empty, (playerData) =>
             {

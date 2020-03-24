@@ -81,34 +81,9 @@ namespace TheHuntGame.Scenes
             EventSystem.EventSystem.Instance.Bind<RopeTugEvent>(OnRopeTug);
             EventSystem.EventSystem.Instance.Bind<GameResultEvent>(OnGameResult);
             EventSystem.EventSystem.Instance.Bind<GameCaughtEvent>(OnGameCaught);
-            EventSystem.EventSystem.Instance.Bind<GameResetEvent>(OnGameReset);
+     
 
 
-        }
-
-        private void OnGameReset(GameResetEvent e)
-        {
-            _earnCoins = 0;
-            _gameEnd = false;
-            _logo.SetActive(true);
-            _winPopup.SetActive(false);
-            _knot.SetActive(false);
-            _hand.SetActive(false);
-            foreach (var animal in _animals)
-            {
-                Destroy(animal);
-            }
-            foreach (var rope in _ropes)
-            {
-                rope.Reset();
-
-            }
-            for (int i = 0; i < _brokenRopes.Length; i++)
-            {
-                _brokenRopes[i].SetActive(false);
-
-            }
-            //call start game
         }
 
         private void OnGameCaught(GameCaughtEvent e)
